@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="98deb66637f36a930f57d32bfff0c994c21b86760baa49e482723aa638bcff69.html">Colocar No Carrinho Produto Da Cor Verde</a>
+                > <a
+                    href="c46c24699b061210efd966258c88d74844510e2bc2edb7ccc59ef2cfa6809b06.html">Para colocar os produtos da cor verde </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-02-2018 12:29</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Colocar No Carrinho Produto Da Cor Verde</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Para Colocar Os Produtos Da Cor Verde
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Open home: http://10.1.10.133:8080/br/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="986ff659f02d8c88792e38017b541f8b9e5e12e3089102d95c8488df7171439f.png" title="Given estou na pagina inicial do site" width="960"/>
+                <img src="986ff659f02d8c88792e38017b541f8b9e5e12e3089102d95c8488df7171439f.png" title="Open home: http://10.1.10.133:8080/br/" width="960"/>
+                <img src="scaled_1e709f807ffefef946b2664518acd37e3dfcef0b4c005bd3ef16ea0a955beecf.png" title="When clico em Todos os Produtos" width="960"/>
+                <img src="1e709f807ffefef946b2664518acd37e3dfcef0b4c005bd3ef16ea0a955beecf.png" title="And filtro a cor &quot;&lt;cor&gt;&quot;" width="960"/>
+                <img src="scaled_498977a135acbcf66e302d06017b55e5f23da4f62ae5b615f619fff611b5b84c.png" title="And seleciono o produto que aparece" width="960"/>
+                <img src="scaled_9b1f0ba9299069824e3ddba9d546414fbab90b79fc79e605952595170c62af97.png" title="And seleciono o tamanho do vestido &quot;&lt;tamanho&gt;&quot;" width="960"/>
+                <img src="scaled_e25dfda16ee9bd07d96d71db75d7b3269bf5ac91c71bd962b492ee3bff7052a1.png" title="And seleciono a cor do vestido &quot;&lt;cor&gt;&quot;" width="960"/>
+                <img src="scaled_f4a7cfd2a80d660a753e1781b048ff7b4a527e22c00d0d5058c31af32685eff5.png" title="And seleciono a cor do vestido &quot;&lt;cor&gt;&quot;" width="960"/>
+                <img src="scaled_96f4e298a7ada3e465051362e5cf6db24f29fc6c9bf08972f9c769b51de2532b.png" title="And seleciono quantidade &quot;&lt;quantidade&gt;&quot;" width="960"/>
+                <img src="scaled_af749de4034b7663a06d56b78d301c306e7c4c67a8a44c75d852bf0d3c42438c.png" title="And seleciono quantidade &quot;&lt;quantidade&gt;&quot;" width="960"/>
+                <img src="scaled_639fe53e5c31f351eac06beeee31f124687e1471473aa7691133a3deac4f8ac4.png" title="And clico em Adicionar ao carrinho" width="960"/>
+                <img src="scaled_2aea7c7594d3012a02131fb4b3c7abbbfc78ed98902cd5824246f76353c32b58.png" title="And clico em Adicionar ao carrinho" width="960"/>
+                <img src="scaled_ed3fef947d0cdb1fd3814bc805ffeb47ad547fb9e1f4987ab0692750116f718a.png" title="And verifico especificacoes da compra &quot;&lt;tamanho&gt;&quot; &quot;&lt;cor&gt;&quot; &quot;&lt;quantidade&gt;&quot;" width="960"/>
+                <img src="scaled_b2f3025ae9ef696f38b63c6b94c6f2f06b1bee013d10a99b016897ffcc6775d7.png" title="Then finalizo compra: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>
