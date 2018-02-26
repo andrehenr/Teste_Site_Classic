@@ -1,4 +1,4 @@
-Feature: Realizar um novo cadastro
+Feature: 01 - Realizar um novo cadastro
 
 Scenario Outline: Para realizar o cadastro
 	Given estou na pagina inicial do site

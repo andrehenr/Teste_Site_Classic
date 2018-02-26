@@ -1,4 +1,4 @@
-Feature: Filtrar produtos por preco e depois retirar todos os filtros
+Feature: 07 -  Filtrar produtos por preco e depois retirar todos os filtros
 
 Scenario Outline: Para executar o filtro 
 	Given estou na pagina inicial do site

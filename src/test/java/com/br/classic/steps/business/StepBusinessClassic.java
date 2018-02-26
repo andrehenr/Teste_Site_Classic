@@ -125,8 +125,11 @@ public class StepBusinessClassic {
 	}
 
 	public void selecionarQuantidade(Integer qtd) {
-		viewElement.clear(page.getCampoQuantidadeVestidos());
-		viewElement.sendText(page.getCampoQuantidadeVestidos(), qtd.toString());
+		int i = 1;
+		while (i < qtd) {
+			viewElement.click(page.getBotaoAumentaQuantidade());
+			i++;
+		}
 	}
 
 	public void clicarAddCarrinho() {
@@ -134,7 +137,12 @@ public class StepBusinessClassic {
 	}
 
 	public void finalizarCompra() {
-		viewElement.click(page.getLinkFinalizarPedido());
+		if (page.getLinkFinalizarPedido().isDisplayed()) {
+			viewElement.click(page.getLinkFinalizarPedido());
+		}
+		else{
+			viewElement.waitAndClick(page.getLinkFinalizarPedido(),20);
+		}
 	}
 
 	public boolean verificarEspecificacoesCompra(String tamanho, String cor, Integer quantidade) {
@@ -181,7 +189,7 @@ public class StepBusinessClassic {
 
 	public void filtrarPorPreco(String preco) {
 		page.getListaPrecos().forEach(elemento -> {
-			if(elemento.getText().contains(preco)){
+			if (elemento.getText().contains(preco)) {
 				viewElement.click(elemento);
 			}
 		});
@@ -193,10 +201,64 @@ public class StepBusinessClassic {
 
 	public void filtrarPorComposicao(String composicao) {
 		page.getListaComposicoes().forEach(elemento -> {
-			if(elemento.getText().contains(composicao)){
+			if (elemento.getText().contains(composicao)) {
 				viewElement.click(elemento);
 			}
 		});
+	}
+
+	public void retirarFiltro(String filtro) {
+		page.getListaDeFiltros().forEach(elemento -> {
+			if (elemento.getText().contains(filtro)) {
+				viewElement.click(elemento.findElement(By.tagName("i")));
+			}
+		});
+	}
+
+	public boolean verificarQuantidadeFiltros(int qtdFiltros) {
+		return page.getListaDeFiltros().size() == qtdFiltros;
+	}
+
+	public void selecionarTipoOrdenacao(String tipoOrdenacao) {
+		page.getListaOpcoesOrdenacaoProdutos().forEach(elemento -> {
+			if (elemento.getText().contains(tipoOrdenacao)) {
+				viewElement.click(elemento);
+			}
+		});
+
+	}
+
+	public void clicarBotaoOrdenacao() {
+		viewElement.click(page.getBotaoOrdenacao());
+	}
+
+	public void passarMouseSobreWomen() {
+		viewElement.mouseOver(page.getLinkWomen());
+	}
+
+	public void clicarLinkTshirts() {
+		viewElement.click(page.getLinkTshirts());
+	}
+	
+	public void clicarLinkFaleConosco(){
+		viewElement.click(page.getLinkFaleConosco());
+	}
+	
+	public void selecionarAssunto(String assunto){
+		viewElement.selectByVisibleText(page.getSelectAssunto(), assunto);
+	}
+	
+	public void preencherCampoMensagem(String texto){
+		viewElement.sendText(page.getCampoMensagem(), texto);
+	}
+	
+	public void clicarEmEnviar(){
+		viewElement.click(page.getBotaoEnviar());
+	}
+	
+	public boolean verificarMensagemDeEnvio(){
+		viewElement.waitForElementIsPresent(10, page.getMensagemSucesso());
+		return page.getMensagemSucesso().getText().contains("Sua mensagem foi enviada com sucesso à nossa equipe.");
 	}
 
 }

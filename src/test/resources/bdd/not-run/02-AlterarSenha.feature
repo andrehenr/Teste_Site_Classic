@@ -1,4 +1,4 @@
-Feature: Alterar senha de um usuario
+Feature: 02 - Alterar senha de um usuario
 
 Scenario Outline: Para alterar a senha de um usuario
 	Given estou na pagina inicial do site

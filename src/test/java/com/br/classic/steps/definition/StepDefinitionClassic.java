@@ -121,12 +121,12 @@ public class StepDefinitionClassic {
 		stepB.selecionarVestidoChiffon();
 	}
 
-	@When("^seleciono o tamanho do vestido \"([^\"]*)\"$")
+	@When("^seleciono o tamanho \"([^\"]*)\"$")
 	public void selecionoTamanhoVestido(String tamanho){
 		stepB.selecionarTamanho(tamanho);
 	}
 
-	@When("^seleciono a cor do vestido \"([^\"]*)\"$")
+	@When("^seleciono a cor \"([^\"]*)\"$")
 	public void selecionoCorvestido(String cor){
 		stepB.selecionarCor(cor);
 	}
@@ -202,13 +202,60 @@ public class StepDefinitionClassic {
 	}
 
 	@When("^retiro filtro \"([^\"]*)\"$")
-	public void retirar_filtro(String filtro) {
+	public void retiroFiltro(String filtro) {
+		stepB.retirarFiltro(filtro);
 	}
 
 	@Then("^verifico quantidade de filtros \"([^\"]*)\"$")
-	public void verifico_quantidade_de_filtros(String arg1) {
-	    
+	public void verificoQuantidadeFiltros(int qtdFiltros) {
+	    Assert.assertTrue(stepB.verificarQuantidadeFiltros(qtdFiltros));
 	}
+	
+	@When("^clico no botao de ordenacao$")
+	public void clicoBotaoOrdenacao(){
+		stepB.clicarBotaoOrdenacao();
+	}
+	
+	@When("^seleciono o tipo de ordenacao \"([^\"]*)\"$")
+	public void selecionoTipoOrdenacao(String tipoOrdenacao){
+		stepB.selecionarTipoOrdenacao(tipoOrdenacao);
+	}
+	
+	@When("^passo mouse sobre Women$")
+	public void passoMouseSobreWomen(){
+		stepB.passarMouseSobreWomen();
+	}
+
+	@When("^clico no link Tshirts$")
+	public void clicoLinkTshirts(){
+		stepB.clicarLinkTshirts();
+	}
+	
+	@When("^clico no link Fale Conosco$")
+	public void clicoLinkFaleConosco(){
+		stepB.clicarLinkFaleConosco();
+	}
+
+	@When("^seleciono assunto \"([^\"]*)\"$")
+	public void selecionoAssunto(String assunto){
+		stepB.selecionarAssunto(assunto);
+	}
+
+	@When("^preencho campo de mensagem \"([^\"]*)\"$")
+	public void preenchoCampoMensagem(String mensagem){
+		stepB.preencherCampoMensagem(mensagem);
+	}
+
+	@When("^clico no botao enviar$")
+	public void clico_no_botao_enviar(){
+		stepB.clicarEmEnviar();
+	}
+
+	@Then("^valido mensagem de envio com sucesso$")
+	public void validoMensagemEnvioComSucesso(){
+		Assert.assertTrue(stepB.verificarMensagemDeEnvio());
+	}
+
 	
 
 }

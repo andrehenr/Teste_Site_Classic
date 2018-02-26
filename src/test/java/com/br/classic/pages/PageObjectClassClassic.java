@@ -90,13 +90,13 @@ public class PageObjectClassClassic extends PageObject {
 	@FindBy(partialLinkText = "Todos os produtos")
 	private WebElement linkTodosProdutos;
 
-	@FindBy(xpath = "//ul[@id='facet_28790']/li/label")
+	@FindBy(xpath = "//a[contains(@href , 'Cor')]/parent::label")
 	private List<WebElement> listaCores;
 
-	@FindBy(xpath = "(//ul[@class='collapse'])[1]/li/label")
+	@FindBy(xpath = "//a[contains(@href , 'Tamanho')]/parent::label")
 	private List<WebElement> listaTamanhos;
 
-	@FindBy(xpath = "(//ul[@class='collapse'])[3]/li/label")
+	@FindBy(xpath = "//a[contains(@href , 'Estilos')]/parent::label")
 	private List<WebElement> listaEstilos;
 
 	@FindBy(xpath = "//div[@class='thumbnail-container']/a/img")
@@ -104,20 +104,90 @@ public class PageObjectClassClassic extends PageObject {
 
 	@FindBy(xpath = "(//button)[4]")
 	private WebElement botaoLimparFiltros;
-	
-	@FindBy(xpath = "(//ul[@class='collapse'])[6]/li/label")
+
+	@FindBy(xpath = "//a[contains(@href , 'q=Pre')]/parent::label")
 	private List<WebElement> listaPrecos;
-	
+
 	@FindBy(xpath = "//*[@class='filter-block']")
 	private List<WebElement> listaDeFiltros;
 
-	@FindBy(xpath = "(//ul[@class='collapse'])[2]/li/label")
+	@FindBy(xpath = "//a[contains(@href , 'Composi')]/parent::label")
 	private List<WebElement> listaComposicoes;
 	
+	@FindBy(xpath = "//div[@class='dropdown-menu']/a")
+	private List<WebElement> listaOpcoesOrdenacaoProdutos;
+	
+	@FindBy(xpath = "//button[@rel='nofollow']")
+	private WebElement botaoOrdenacao;
+	
+	@FindBy(xpath = "//a[contains(.,'Women')]")
+	private WebElement linkWomen;
+	
+	@FindBy(xpath = "//a[contains(.,'T-shirts')]")
+	private WebElement linkTshirts;
+	
+	@FindBy(xpath = "//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']")
+	private WebElement botaoAumentaQuantidade;
+	
+	@FindBy(xpath = "(//a[contains(.,'Fale conosco')])[1]")
+	private WebElement linkFaleConosco;
+	
+	@FindBy(name = "id_contact")
+	private WebElement selectAssunto;
+	
+	@FindBy(name = "message")
+	private WebElement campoMensagem;
+	
+	@FindBy(name = "submitMessage")
+	private WebElement botaoEnviar;
+	
+	@FindBy(xpath = "//div[@class='col-xs-12 alert alert-success']")
+	private WebElement mensagemSucesso;
+	
+	public WebElement getMensagemSucesso() {
+		return mensagemSucesso;
+	}
+	
+	public WebElement getBotaoEnviar() {
+		return botaoEnviar;
+	}
+	
+	public WebElement getCampoMensagem() {
+		return campoMensagem;
+	}
+	
+	public WebElement getSelectAssunto() {
+		return selectAssunto;
+	}
+	
+	public WebElement getLinkFaleConosco() {
+		return linkFaleConosco;
+	}
+	
+	public WebElement getBotaoAumentaQuantidade() {
+		return botaoAumentaQuantidade;
+	}
+	
+	public WebElement getLinkTshirts() {
+		return linkTshirts;
+	}
+	
+	public WebElement getLinkWomen() {
+		return linkWomen;
+	}
+	
+	public WebElement getBotaoOrdenacao() {
+		return botaoOrdenacao;
+	}
+	
+	public List<WebElement> getListaOpcoesOrdenacaoProdutos() {
+		return listaOpcoesOrdenacaoProdutos;
+	}
+
 	public List<WebElement> getListaPrecos() {
 		return listaPrecos;
 	}
-	
+
 	public List<WebElement> getListaDeFiltros() {
 		return listaDeFiltros;
 	}

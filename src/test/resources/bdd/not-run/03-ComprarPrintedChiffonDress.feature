@@ -1,4 +1,4 @@
-Feature: Compar Produto Printed Chiffon Dress
+Feature: 03 - Compar Produto Printed Chiffon Dress
 
 Scenario Outline: Para realiza a compra
 	Given estou na pagina inicial do site
@@ -7,8 +7,8 @@ Scenario Outline: Para realiza a compra
 	And preencho campo pesquisa no catalogo "<roupa>"
 	And clico no botao de pesquisa
 	And seleciono o vestido Chiffon
-	And seleciono o tamanho do vestido "<tamanho>"
-	And seleciono a cor do vestido "<cor>"
+	And seleciono o tamanho "<tamanho>"
+	And seleciono a cor "<cor>"
 	And seleciono quantidade "<quantidade>"
 	And clico em Adicionar ao carrinho
 	And verifico especificacoes da compra "<tamanho>" "<cor>" "<quantidade>"
