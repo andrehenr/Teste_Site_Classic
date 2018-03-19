@@ -13,3 +13,6 @@ It will install openbdt relative dependencies in Maven local Repository. After t
 ```sh
     mvn verify io.openbdt:openbdt.plugin.maven:format-report
 ```
+
+#### - Status project in Travis:
+[![Build Status](https://travis-ci.org/andrehenr/Teste_Site_Classic.svg?branch=master)](https://travis-ci.org/andrehenr/Teste_Site_Classic)
